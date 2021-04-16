@@ -4,12 +4,18 @@ services:
   datadog:
     build: .
     environment:
-     - DD_API_KEY=
-     - ELASTIC_URL=
-     - ELASTIC_USERNAME=
-     - ELASTIC_PASSWORD=
-     - DATADOG_TAG_ENV=
-     - DATADOG_TAG_APP=
+      - DD_API_KEY=
+      - ELASTIC_URL=
+      - ELASTIC_USERNAME=
+      - ELASTIC_PASSWORD=
+      - DATADOG_TAG_ENV=dev
+      - DATADOG_TAG_APP=elasticsearch
+      - DD_ENV=dev
+      - DD_SITE=datadoghq.eu
+      - DD_APM_ENABLED=true
+      - DD_LOGS_ENABLED=true
+      - DD_PROCFS_PATH=/proc
+
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

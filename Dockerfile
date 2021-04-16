@@ -1,4 +1,4 @@
-FROM datadog/agent:7.18.1
+FROM datadog/agent:latest
 
 RUN mkdir -p /conf.d
 RUN mkdir -p /conf.d/elastic.d

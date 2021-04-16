@@ -5,6 +5,9 @@ instances:
     cluster_stats: true
     index_stats: true
     pshard_stats: true
+    pending_task_stats: true
+    slm_stats: true
+    cat_allocation_stats: true
     tags:
       - host:""
       - env:${DATADOG_TAG_ENV}
@@ -12,3 +15,14 @@ instances:
     auth_type: basic
     username: ${ELASTIC_USERNAME}
     password: ${ELASTIC_PASSWORD}
+    # log_requests: true
+# logs:
+#   - type: file
+#     path: /var/log/elasticsearch/*.log
+#     source: elasticsearch
+#   - type: file
+#     path: /var/log/elasticsearch/<CLUSTER_NAME>_index_indexing_slowlog.log
+#     source: elasticsearch
+#   - type: file
+#     path: /var/log/elasticsearch/<CLUSTER_NAME>_index_search_slowlog.log
+#     source: elasticsearch
